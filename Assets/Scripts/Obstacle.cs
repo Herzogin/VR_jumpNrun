@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
         {
             print("Kawumm!");
             LifeCounter.remainingLifes -= 1;
-            //FindObjectOfType<AudioManager>().PlayAudio("BallCatch");
+            FindObjectOfType<AudioManager>().PlayAudio("explosion");
             Destroy(gameObject);
         }
     }

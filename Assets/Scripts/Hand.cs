@@ -58,7 +58,7 @@ public class Hand : MonoBehaviour
         }
         else if(currentCollectableItem)
         {
-            LifeCounter.ammunition += 1;
+            AmmunitionCounter.ammunition += 1;
             FindObjectOfType<AudioManager>().PlayAudio("pickup1");
             Destroy(currentCollectableItem);
         }

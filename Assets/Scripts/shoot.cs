@@ -20,19 +20,24 @@ public class shoot : MonoBehaviour
 
     private void Start()
     {
-        //sceneManager = GameObject.Find("SceneManager");
-        //skyboxScript = GameObject.FindObjectOfType(typeof(SkyboxController)) as SkyboxController;
+        
     }
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
         Debug.Log("clicked");
-
+        Debug.Log("AmmunitionLeft: " + AmmunitionCounter.ammunitionLeft);
         if (e.target.name == "Cube")
         {
+            if (AmmunitionCounter.ammunitionLeft)
+            {
+                //Debug.Log(e.target.name + " was clicked");
+                FindObjectOfType<AudioManager>().PlayAudio("explosion");
+                Destroy(e.target.gameObject);
+                AmmunitionCounter.ammunition -= 1;
+            }
             
-            Debug.Log(e.target.name + " was clicked");
-            Destroy(e.target.gameObject);
+            
         }
     }
 }
