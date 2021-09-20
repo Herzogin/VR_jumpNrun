@@ -11,7 +11,7 @@ public class HitDestroy : MonoBehaviour
     public GameObject ControllerLeft = null;
     public GameObject ControllerRight = null;
     bool gripPressed = false;
-    int hitCounter = 0;
+    //int hitCounter = 0;
 
     
     // Update is called once per frame
@@ -66,11 +66,13 @@ public class HitDestroy : MonoBehaviour
         {
             print("smashed " + other.name);
             FindObjectOfType<AudioManager>().PlayAudio("woodHit");
-            hitCounter += 1;
+            //hitCounter += 1;
 
-            if(hitCounter > 2)
+            if (AmmunitionCounter.ammunitionLeft)
             {
-                FindObjectOfType<AudioManager>().PlayAudio("explosion");
+                FindObjectOfType<AudioManager>().PlayAudio("woodHit");
+                AmmunitionCounter.ammunition -= 1;
+                CanvasChanger.changeAmmunitionText(AmmunitionCounter.ammunition);
                 Destroy(other);
             }
         

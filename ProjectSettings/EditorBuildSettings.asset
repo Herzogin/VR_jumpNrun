@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/GameOver0.unity
     guid: 1f1f21d0b6140f94186d6e4cce7475f6
   - enabled: 1
-    path: Assets/Scenes/old/RacetrackLevel1Greybox.unity
-    guid: 2ede8a59e2aae1d49bf957cc976b9fd7
+    path: Assets/Scenes/RacetrackLevel1.unity
+    guid: 7e06382d616a720489f0df0517ceeab9
+  - enabled: 1
+    path: Assets/Scenes/RacetrackLevel2.unity
+    guid: d79ada4a2c0c1af47b8a6d0f31368557
   - enabled: 1
     path: Assets/Scenes/RacetrackLevel3.unity
     guid: 5b15db767e5a73a47bc866b411d33b20
-  - enabled: 1
-    path: Assets/Scenes/old/RacetrackLevel2old.unity
-    guid: 51d00dbec61e1af46b5e967c3994252e
   - enabled: 1
     path: Assets/Scenes/Won4.unity
     guid: d7745b832a554f84fb7e4f7bdf9e4b17

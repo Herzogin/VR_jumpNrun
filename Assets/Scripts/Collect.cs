@@ -13,18 +13,19 @@ public class Collect : MonoBehaviour
             print("collected " + other.name);
             FindObjectOfType<AudioManager>().PlayAudio("pickup1");
 
-            if(other.name == "gem_rose" || other.name == "Sphere")
+            if(other.name == "gem_rose" || other.name == "Mushroom")
             {
                 AmmunitionCounter.ammunition += 1;
                 CanvasChanger.changeAmmunitionText(AmmunitionCounter.ammunition);
                 Destroy(other);
             }
-            else if (other.name == "gem_white" || other.name == "Chicken" || other.name == "Sphere")
+            else if (other.name == "gem_white" || other.name == "Chicken")
             {
                 LootCounter.lootCount += 1;
                 //CanvasChanger.changeGemCounterText(GemCounter.gem_white);
                 CanvasChanger.changeLootCounterText(LootCounter.lootCount);
-                Destroy(other);
+                other.GetComponent<MeshRenderer>().enabled = false;
+                //Destroy(other);
             }
             //else if()
             //{

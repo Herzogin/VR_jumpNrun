@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LifeCounter : MonoBehaviour
 {
-    public static int remainingLifes = 5;
+    public static int remainingLifes = 10;
     bool NoLifesLeft = false;
 
 

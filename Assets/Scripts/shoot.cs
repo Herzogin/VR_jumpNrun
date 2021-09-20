@@ -36,6 +36,7 @@ public class shoot : MonoBehaviour
                 FindObjectOfType<AudioManager>().PlayAudio("explosion");
                 Destroy(e.target.gameObject);
                 AmmunitionCounter.ammunition -= 1;
+                CanvasChanger.changeAmmunitionText(AmmunitionCounter.ammunition);
             }
         }else if (e.target.tag == "NotShootable")
         {
