@@ -8,7 +8,7 @@ public class Obstacle : MonoBehaviour
     {
         if (collision.transform.name == "[CameraRig]")
         {
-            print("Kawumm!");
+            print("collision with obstacle!!");
             LifeCounter.remainingLifes -= 1;
             FindObjectOfType<AudioManager>().PlayAudio("explosion");
             Destroy(gameObject);

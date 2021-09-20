@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - collectable
   - Collectable
+  - Interactable
+  - Smashable
+  - Shootable
+  - NotShootable
   layers:
   - Default
   - TransparentFX

@@ -10,8 +10,6 @@ public class AmmunitionCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CanvasChanger.changeAmmunitionText(ammunition);
-
         if (ammunition == 0)
         {
             ammunitionLeft = false;

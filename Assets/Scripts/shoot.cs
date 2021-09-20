@@ -27,7 +27,8 @@ public class shoot : MonoBehaviour
     {
         Debug.Log("clicked");
         Debug.Log("AmmunitionLeft: " + AmmunitionCounter.ammunitionLeft);
-        if (e.target.name == "Cube")
+        FindObjectOfType<AudioManager>().PlayAudio("shoot");
+        if (e.target.tag == "Shootable")
         {
             if (AmmunitionCounter.ammunitionLeft)
             {
@@ -36,7 +37,13 @@ public class shoot : MonoBehaviour
                 Destroy(e.target.gameObject);
                 AmmunitionCounter.ammunition -= 1;
             }
-            
+        }else if (e.target.tag == "NotShootable")
+        {
+            FindObjectOfType<AudioManager>().PlayAudio("hitMiss");
+            if(e.target.gameObject.transform.localScale.x < 6)
+            {
+                e.target.gameObject.transform.localScale *= 1.5f; 
+            }
             
         }
     }

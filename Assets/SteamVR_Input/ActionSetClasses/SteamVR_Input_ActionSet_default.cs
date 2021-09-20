@@ -105,30 +105,6 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Vector2 MovementAxis
-        {
-            get
-            {
-                return SteamVR_Actions.default_MovementAxis;
-            }
-        }
-        
-        public virtual SteamVR_Action_Boolean Jump
-        {
-            get
-            {
-                return SteamVR_Actions.default_Jump;
-            }
-        }
-        
-        public virtual SteamVR_Action_Boolean shoot
-        {
-            get
-            {
-                return SteamVR_Actions.default_shoot;
-            }
-        }
-        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get

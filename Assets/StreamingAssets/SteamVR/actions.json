@@ -50,18 +50,6 @@
       "type": "boolean"
     },
     {
-      "name": "/actions/default/in/MovementAxis",
-      "type": "vector2"
-    },
-    {
-      "name": "/actions/default/in/Jump",
-      "type": "boolean"
-    },
-    {
-      "name": "/actions/default/in/shoot",
-      "type": "boolean"
-    },
-    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
@@ -99,8 +87,32 @@
       "type": "boolean"
     },
     {
-      "name": "/actions/jumpNrun/in/run",
+      "name": "/actions/jumpNrun/in/Grab_Pinch",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/jumpNrun/in/Interact_With_UI",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/jumpNrun/in/smash",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/jumpNrun/in/ActivateMenu",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/jumpNrun/in/Select",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/jumpNrun/in/MenuSelectionPosition",
       "type": "vector2"
+    },
+    {
+      "name": "/actions/jumpNrun/in/SpeedBooster",
+      "type": "boolean"
     }
   ],
   "action_sets": [
@@ -123,10 +135,6 @@
     {
       "name": "/actions/jumpNrun",
       "usage": "leftright"
-    },
-    {
-      "name": "/actions/NewSet",
-      "usage": "single"
     }
   ],
   "default_bindings": [

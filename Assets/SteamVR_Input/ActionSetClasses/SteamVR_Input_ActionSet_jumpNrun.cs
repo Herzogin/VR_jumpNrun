@@ -25,11 +25,59 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Vector2 run
+        public virtual SteamVR_Action_Boolean Grab_Pinch
         {
             get
             {
-                return SteamVR_Actions.jumpNrun_run;
+                return SteamVR_Actions.jumpNrun_Grab_Pinch;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean Interact_With_UI
+        {
+            get
+            {
+                return SteamVR_Actions.jumpNrun_Interact_With_UI;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean smash
+        {
+            get
+            {
+                return SteamVR_Actions.jumpNrun_smash;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean ActivateMenu
+        {
+            get
+            {
+                return SteamVR_Actions.jumpNrun_ActivateMenu;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean Select
+        {
+            get
+            {
+                return SteamVR_Actions.jumpNrun_Select;
+            }
+        }
+        
+        public virtual SteamVR_Action_Vector2 MenuSelectionPosition
+        {
+            get
+            {
+                return SteamVR_Actions.jumpNrun_MenuSelectionPosition;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean SpeedBooster
+        {
+            get
+            {
+                return SteamVR_Actions.jumpNrun_SpeedBooster;
             }
         }
     }

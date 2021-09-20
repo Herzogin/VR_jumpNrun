@@ -6,15 +6,21 @@ using UnityEngine.UI;
 
 public class CanvasChanger : MonoBehaviour
 {
+    public GameObject Lifes = null;
+    public GameObject Ammunition = null;
+    public GameObject Loot = null;
+
     private static  Text LifeText;
     private static Text AmmunitionText;
-    
+    private static Text LootText;
 
-    // Start is called before the first frame update
+
+    //Start is called before the first frame update
     void Start()
     {
-        LifeText = GameObject.Find("/Canvas/Lifes").GetComponent<Text>();
-        AmmunitionText = GameObject.Find("/Canvas/Ammunition").GetComponent<Text>();
+        LifeText = Lifes.GetComponent<Text>();
+        AmmunitionText = Ammunition.GetComponent<Text>();
+        LootText = Loot.GetComponent<Text>();
     }
 
     public static void changeLifesText(int LifeCount)
@@ -26,4 +32,10 @@ public class CanvasChanger : MonoBehaviour
     {
         AmmunitionText.text = AmmunitionCounter.ToString();
     }
+
+    public static void changeLootCounterText(int LootCounter)
+    {
+        LootText.text = LootCounter.ToString();
+    }
+
 }

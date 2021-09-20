@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+// from my repo: https://github.com/Herzogin/VR-Voice-SystemControl/
 public class AudioManager : MonoBehaviour
 {
     public Audio[] audios;

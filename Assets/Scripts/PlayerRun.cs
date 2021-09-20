@@ -22,6 +22,14 @@ public class PlayerRun : MonoBehaviour
     public GameObject AxisHand;//Hand Controller GameObject
     //public PhysicMaterial NoFrictionMaterial;
     //public PhysicMaterial FrictionMaterial;
+
+
+
+    private void Awake()
+    {
+        
+    }
+
     private void Start()
     {
         CapCollider = GetComponent<CapsuleCollider>();
@@ -54,6 +62,28 @@ public class PlayerRun : MonoBehaviour
         //    CapCollider.material = FrictionMaterial;
         //}
     }
+
+    public float GetMovementSpeed()
+    {
+        return MovementSpeed;
+    }
+
+    public float GetJumpHeight()
+    {
+        return jumpHeight;
+    }
+
+    public void SetMovementSpeed(float speed)
+    {
+        MovementSpeed = speed;
+    }
+
+    public void SetJumpHeight(float height)
+    {
+        jumpHeight = height;
+    }
+
+    
 
     //public static float Angle(Vector2 p_vector2)
     //{
