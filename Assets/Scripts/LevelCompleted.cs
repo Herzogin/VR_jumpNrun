@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-//from my repo: https://github.com/Herzogin/Island
+//from my GitHub-Repo: https://github.com/Herzogin/Island
 public class LevelCompleted : MonoBehaviour
 {
     public int SwitchToSceneNumber;
@@ -33,14 +31,8 @@ public class LevelCompleted : MonoBehaviour
         }
     }
 
-    
-
     private void OnTriggerEnter(Collider other)
     {
         SceneManager.LoadScene(Scene);
-        //if (other.tag == "Player")
-        //{
-        //    SceneManager.LoadScene(Scene);
-        //}
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 
@@ -30,8 +28,6 @@ public class SpeedBooster : MonoBehaviour
         }
     }
 
-
-
     private void BoosteSpeed(float oldSpeed)
     {
         if (oldSpeed <= 5.0f)
@@ -45,8 +41,6 @@ public class SpeedBooster : MonoBehaviour
         else if (oldSpeed >= 10.0f)
         {
             playerRun.SetMovementSpeed(oldSpeed * 5);
-        }
-        
-        
+        }       
     }
 }

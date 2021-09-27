@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneStarts : MonoBehaviour
@@ -9,5 +7,4 @@ public class SceneStarts : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().PlayAudio("AudioOnStart");
     }
-
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +11,6 @@ public class CanvasChanger : MonoBehaviour
     private static  Text LifeText;
     private static Text AmmunitionText;
     private static Text LootText;
-
 
     //Start is called before the first frame update
     void Start()
@@ -37,5 +34,4 @@ public class CanvasChanger : MonoBehaviour
     {
         LootText.text = LootCounter.ToString();
     }
-
 }

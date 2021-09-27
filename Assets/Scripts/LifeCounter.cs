@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LifeCounter : MonoBehaviour
@@ -7,15 +5,11 @@ public class LifeCounter : MonoBehaviour
     public static int remainingLifes = 10;
     bool NoLifesLeft = false;
 
-
-
-
-
     void Update()
     {
         CanvasChanger.changeLifesText(remainingLifes);
 
-        if (remainingLifes < 1) //== 0 && !NoLifesLeft)
+        if (remainingLifes < 1)
         {
             NoLifesLeft = true;
         }

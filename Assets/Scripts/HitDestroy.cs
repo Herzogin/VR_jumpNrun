@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
-
 
 public class HitDestroy : MonoBehaviour
 {
@@ -11,7 +7,6 @@ public class HitDestroy : MonoBehaviour
     public GameObject ControllerLeft = null;
     public GameObject ControllerRight = null;
     bool gripPressed = false;
-    //int hitCounter = 0;
 
     
     // Update is called once per frame
@@ -19,7 +14,7 @@ public class HitDestroy : MonoBehaviour
     {
         if (Smash.GetLastStateDown(SteamVR_Input_Sources.Any))
         {
-            print("Grip pressed ");
+            print("Grip pressed " + gripPressed);
             gripPressed = true;
 
             if (Smash.GetLastStateDown(SteamVR_Input_Sources.RightHand))
@@ -32,12 +27,10 @@ public class HitDestroy : MonoBehaviour
                 ControllerLeft.transform.GetChild(0).gameObject.SetActive(false);
                 ControllerLeft.transform.GetChild(1).gameObject.SetActive(true);
             }
-            
-            
         }
         else if (Smash.GetLastStateUp(SteamVR_Input_Sources.Any))
         {
-            print("Grip released");
+            print("Grip pressed " + gripPressed);
             gripPressed = false;
 
             if (Smash.GetLastStateUp(SteamVR_Input_Sources.RightHand))
@@ -49,15 +42,10 @@ public class HitDestroy : MonoBehaviour
             {
                 ControllerLeft.transform.GetChild(0).gameObject.SetActive(true);
                 ControllerLeft.transform.GetChild(1).gameObject.SetActive(false);
-            }
-                
-            
-        }
-
-        
+            }          
+        }   
     }
 
-   
 
     private void OnTriggerEnter(Collider other)
     {
@@ -66,27 +54,7 @@ public class HitDestroy : MonoBehaviour
         {
             print("smashed " + other.name);
             FindObjectOfType<AudioManager>().PlayAudio("woodHit");
-            //hitCounter += 1;
-
-            if (AmmunitionCounter.ammunitionLeft)
-            {
-                FindObjectOfType<AudioManager>().PlayAudio("woodHit");
-                AmmunitionCounter.ammunition -= 1;
-                CanvasChanger.changeAmmunitionText(AmmunitionCounter.ammunition);
-                Destroy(other);
-            }
-        
-            //ParticleSystem ps = other.gameObject.GetComponent<ParticleSystem>();
-            //ps.Play();
-            //other.gameObject.GetComponent<MeshRenderer>().enabled = false;
-            // get child
-            //GameObject child = other.gameObject.transform.GetChild(0).gameObject;
-            
+            Destroy(other.gameObject);
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        print("exited: " + other.name);
     }
 }

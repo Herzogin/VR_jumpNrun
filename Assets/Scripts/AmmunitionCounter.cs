@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AmmunitionCounter : MonoBehaviour
@@ -19,6 +17,4 @@ public class AmmunitionCounter : MonoBehaviour
             ammunitionLeft = true;
         }
     }
-
-
 }

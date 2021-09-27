@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,7 +24,7 @@ public class GateKeeper : MonoBehaviour
         
         LootText.text = LootCounter.lootCount.ToString();
 
-        if (LootCounter.lootCount > 20)
+        if (LootCounter.lootCount > 30)
         {
             CanvasCounter.transform.GetChild(2).gameObject.SetActive(true);
             CameraRig.GetComponent<PlayerRun>().SetMovementSpeed(0.3f);

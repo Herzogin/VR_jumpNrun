@@ -1,26 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.Extras;
 
 public class shoot : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
-    //GameObject sceneManager;
-
-
-
 
     void Awake()
     {
-        //laserPointer.PointerIn += PointerInside;
-        //laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
-    }
-
-    private void Start()
-    {
-        
     }
 
     public void PointerClick(object sender, PointerEventArgs e)
@@ -32,7 +19,6 @@ public class shoot : MonoBehaviour
         {
             if (AmmunitionCounter.ammunitionLeft)
             {
-                //Debug.Log(e.target.name + " was clicked");
                 FindObjectOfType<AudioManager>().PlayAudio("explosion");
                 Destroy(e.target.gameObject);
                 AmmunitionCounter.ammunition -= 1;
@@ -45,7 +31,6 @@ public class shoot : MonoBehaviour
             {
                 e.target.gameObject.transform.localScale *= 1.5f; 
             }
-            
         }
     }
 }
